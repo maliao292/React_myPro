@@ -1,0 +1,126 @@
+/* 登录 */
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/bg.png");
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login .proTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.login .proTitle img {
+  height: 250px;
+}
+
+.login .lCon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cdcd{
+  padding: 10px;
+  margin-right: 50px;
+}
+
+
+
+.login .lCon>div>img {
+  height: 100%;
+}
+
+.login .logmsg{
+  width: 320px;
+  padding: 50px 30px;
+  background-image: url(../images/lmsg.png);
+  background-size: 100% 100%;
+}
+.login i.el-input__icon.el-icon-user-solid{
+  color: #1ce7e2;
+}
+.logform {
+  width: 80%;
+  height: 75%;
+  background: #fff;
+}
+
+.logProName {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.logProName img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.logProName span {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.logform h2 {
+  font-size: 30px;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logform>div {
+  border-radius: 10px;
+  padding: 10px 10px 0 40px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logform>div>div {
+  width: 50%;
+  height: 100%;
+  padding: 40px 150px;
+}
+
+.logform>div>img {
+  margin-top: 80px;
+  height: 100%;
+}
+
+.logform>div>div>h3 {
+  color: #529de1;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.logform label {
+  font-size: 18px;
+  color: #333;
+}
+
+.companyname {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.companyname span {
+  font-size: 34px;
+  font-weight: 500;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 10px;
+  color: #0e6f9c;
+
+}
+
+.dologin {
+  padding: 1px;
+  background-size: 100% 100%;
+  margin-top: 55px;
+}
