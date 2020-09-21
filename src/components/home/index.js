@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import {Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            msg: '主页'
+            msg: '主页',
+            userName: 'admin',
+            mapname: '',
+            stationname: '',
+            photo: require('../../assets/images/user.png'),
+            logout: require('../../assets/images/logout.png'),
+            setting: require('../../assets/images/setting.png'),
         };
     }
     render() {
@@ -17,13 +23,17 @@ class Home extends Component {
                             <li>
                                 <Link to='/login'><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></Link>
                             </li>
-                         
+
                         </ul>
-                        <div className="logout icon iconfont icon-tuichu"></div>
+                        <div className="userMsg">
+                            <div>
+                                <img src={this.state.logout} alt="" />
+                            </div>
+                        </div>
                     </div>
-                
-                </div>
-            </div>
+
+                </div >
+            </div >
         );
     }
 }

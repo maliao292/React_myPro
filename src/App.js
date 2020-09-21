@@ -1,9 +1,9 @@
-import React,{Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 import Login from './components/login'
 import Home from './components/home'
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
 
@@ -13,11 +13,11 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <div>
-          <Route exect path='/' component={Home}></Route>
-          <Route exect path='/login' component={Login}></Route>
-        </div>
-        </Router >
+          <Switch>
+            <Route exact path='/' component={Home}></Route>
+            <Route path='/login' component={Login}></Route>
+          </Switch>
+        </Router>
       </div >
     );
   }
