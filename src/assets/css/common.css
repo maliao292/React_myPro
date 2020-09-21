@@ -6,6 +6,10 @@
     url("../fontFamily/yh.ttf") format("truetype"),
     url("../fontFamily/yh.svg") format("svg");
 }
+@font-face {
+	font-family: "integrated";
+	src: url("../fontFamily/integrated.otf")
+}
 body,
 div,
 dl,

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1073963",
+      "name": "充电桩",
+      "font_class": "chargingpile",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
       "icon_id": "17255748",
       "name": "yh_yhqzt 副本 2",
       "font_class": "yh_yhqztfuben2",

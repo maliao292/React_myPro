@@ -196,3 +196,16 @@
   background-color: transparent!important;
   border: none!important;
 }
+
+
+
+
+/*充电枪弹出框*/
+.fullScreenShow_gun{
+  position: absolute;
+  top: 75px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+}
