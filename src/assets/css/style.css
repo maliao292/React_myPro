@@ -77,8 +77,12 @@
   border: 1px solid #2fe8ff;
   color: #11E6DE;
   font-size: 16PX;
+  margin-bottom: 20px;
 }
-
+.login .el-input__inner .ant-input{
+  background-color: #00010b;
+  color: #11E6DE;
+}
 .login .dologin {
   width: 200px;
   display: block;

@@ -13,6 +13,9 @@ class Home extends Component {
             setting: require('../../assets/images/setting.png'),
         };
     }
+    logout = () =>{
+        this.props.history.push('/login')
+    }
     render() {
         return (
             <div className='homeContainer'>
@@ -27,7 +30,7 @@ class Home extends Component {
                         </ul>
                         <div className="userMsg">
                             <div>
-                                <img src={this.state.logout} alt="" />
+                                <img src={this.state.logout} onClick={this.logout} alt="" />
                             </div>
                         </div>
                     </div>
