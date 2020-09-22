@@ -77,12 +77,8 @@
   border: 1px solid #2fe8ff;
   color: #11E6DE;
   font-size: 16PX;
-  margin-bottom: 20px;
 }
-.login .el-input__inner .ant-input{
-  background-color: #00010b;
-  color: #11E6DE;
-}
+
 .login .dologin {
   width: 200px;
   display: block;
@@ -269,7 +265,13 @@ body .el-select-dropdown {
 }
 
 .yhTable.el-table thead.is-group th {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  text-align: center;
+}
+
+.yhTable.el-table th.is-leaf {
+  background-color: rgba(0, 0, 0, 0.4);
   border: none;
   text-align: center;
 }
@@ -301,7 +303,7 @@ body .el-select-dropdown {
 }
 
 .yhTable.el-table tr td>div {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
   padding: 8px 0;
   height: 35px;
   line-height: 19px;
@@ -678,44 +680,158 @@ body .amap-info-content {
   background: url(../images/msgalert.png);
   background-size: 100% 100%;
 }
-.alstatusnum{
+
+.alstatusnum {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.alstatusnum li{
+
+.alstatusnum li {
   width: 49%;
   background: rgba(0, 0, 0, 0.5);
   padding: 15px 0;
   text-align: center;
 
 }
-.alstatusnum li span{
+
+.alstatusnum li span {
   font-size: 18px;
   color: #03c974;
 }
-.alstatusnum li:nth-child(2) span{
+
+.alstatusnum li:nth-child(2) span {
   color: #2fe0f5;
 }
-.alstatusnum li:nth-child(3) span{
+
+.alstatusnum li:nth-child(3) span {
   color: #f6a338;
 }
-.alstatusnum li:nth-child(4) span{
+
+.alstatusnum li:nth-child(4) span {
   color: #cad2f4;
 }
-.alstatusnum li p{
+
+.alstatusnum li p {
   font-size: 14px;
   color: #999;
 }
-.homeContent .amap-info-sharp{
+
+.homeContent .amap-info-sharp {
   display: none;
 }
-.amap-info-close{
+
+.amap-info-close {
   margin-top: 5px;
   margin-right: 10px;
   font-size: 20px;
   color: aqua;
 }
+
+.editForm.el-form--inline .el-form-item__label {
+  display: block;
+  text-align: left;
+}
+
+.editForm .el-form-item:not(.endBtn),
+.editForm.el-form--inline .el-form-item__label+.el-form-item__content,
+.editForm .el-select {
+  width: 100%;
+}
+
+.editForm .el-form-item:not(.endBtn) {
+  margin-bottom: 0;
+}
+
+.powerCon_s .el-tree {
+  background-color: transparent;
+}
+
+.powerCon_s .el-tree-node__content:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.powerCon_s .el-tree-node:focus>.el-tree-node__content {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.powerCon_s .el-tree-node__label {
+  color: aqua;
+}
+
+.powerCon_s .el-checkbox__inner {
+  border: 1px solid aqua;
+  background: transparent;
+}
+
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+
+.menuList.active .tac {
+  opacity: 0;
+
+}
+
+body .menuList.active {
+  left: -230px;
+}
+
+.menuList .tac {
+  opacity: 1;
+  transition: all .5s;
+}
+
+.menuList {
+  position: relative;
+  left: 0;
+  transition: all .5s;
+}
+
+.menuList.active .arrowBtn {
+  transform: rotate(180deg);
+  right: -30px;
+}
+
+.menuList .arrowBtn {
+  cursor: pointer;
+  transform: rotate(0);
+  transition: all .5s;
+}
+
+/* .menuList .arrowBtn:hover {
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  0% {
+    top: 50%;
+  }
+
+  20% {
+    top: calc(50% - 20px);
+  }
+
+  40% {
+    top: 50%;
+  }
+
+  60% {
+    top: calc(50% - 30px);
+  }
+
+  80% {
+    top: calc(50% - 10px);
+  }
+
+  100% {
+    top: 50%;
+  }
+} */
 
 /* ********************************************* */
 .homeContainer {
@@ -999,7 +1115,8 @@ body .amap-info-content {
   flex-direction: column;
   text-align: center;
 }
-.iconStatus li img{
+
+.iconStatus li img {
   width: 100%;
 }
 
@@ -1008,29 +1125,34 @@ body .amap-info-content {
   color: #666;
   margin-top: 5px;
 }
-.iconStatus li p 
-.amap-info-close {
+
+.iconStatus li p .amap-info-close {
   display: none;
 }
-.iconStatus li p span{
+
+.iconStatus li p span {
   color: aqua;
   vertical-align: middle;
 
 }
-.iconStatus li p span:last-child{
+
+.iconStatus li p span:last-child {
   font-size: 26px;
   display: inline-block;
   margin-left: 5px;
 }
+
 .alstyle .showModel>div {
   padding: 5px;
   margin-right: 0;
   width: 260px;
 
 }
-.alstyle .showModel{
+
+.alstyle .showModel {
   height: auto;
 }
+
 .alstyle .showModel>div i {
   width: 30px;
   height: 30px;
@@ -1042,10 +1164,12 @@ body .amap-info-content {
   background: #fe5623;
   font-size: 16px;
 }
+
 .alstyle .showModel>div p {
-    color: #fe5623;
-    font-size: 16px;
+  color: #fe5623;
+  font-size: 16px;
 }
+
 .alstyle h2 {
   font-size: 14px;
   color: #85e8f6;

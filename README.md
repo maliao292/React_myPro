@@ -1,3 +1,6 @@
+# 高德地图组件 npm install --save react-amap
+## react-amap https://elemefe.github.io/react-amap/articles/start
+
 # myRealReactPro
 全面的 React 项目，包括 redux 、redux-thunk、router 以及 ANTD....
 
