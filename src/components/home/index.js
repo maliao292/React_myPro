@@ -1,3 +1,15 @@
+/*
+ * @Author: mikey.zhaopeng 
+ * @Date: 2020-09-22 17:29:24 
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2020-09-22 17:30:12
+ */
+/*
+ * @Author: mikey.zhaopeng 
+ * @Date: 2020-09-22 17:29:23 
+ * @Last Modified by:   mikey.zhaopeng 
+ * @Last Modified time: 2020-09-22 17:29:23 
+ */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 class Home extends Component {
@@ -13,7 +25,7 @@ class Home extends Component {
             setting: require('../../assets/images/setting.png'),
         };
     }
-    logout = () =>{
+    logout = () => {
         this.props.history.push('/login')
     }
     render() {
@@ -24,9 +36,11 @@ class Home extends Component {
                         <div className="homeProName">电动汽车充电桩一体化平台</div>
                         <ul>
                             <li>
-                                <Link to='/login'><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></Link>
+                                <Link to='/map'><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></Link>
                             </li>
-
+                            <li>
+                                <Link to='/map'><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></Link>
+                            </li>
                         </ul>
                         <div className="userMsg">
                             <div>
@@ -34,7 +48,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-
+                    <div className='mainContent'></div>
                 </div >
             </div >
         );

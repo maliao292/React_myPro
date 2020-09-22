@@ -1,56 +1,4 @@
-@font-face {
-  font-family: "timeFont";
-  src: url("../timeFont/time.eot");
-  src: url("../timeFont/time.woff") format("woff"),
-    url("../timeFont/time.ttf") format("truetype"),
-    url("../timeFont/time.svg") format("svg");
-}
 
-/* 大屏左上角字体 */
-@font-face {
-  font-family: "circle";
-  src: url("../fontFamily/circle.eot");
-  src: url("../fontFamily/circle.woff") format("woff"),
-    url("../fontFamily/circle.ttf") format("truetype"),
-    url("../fontFamily/circle.svg") format("svg");
-}
-
-/* 大屏左上角时间 后面的TIME */
-@font-face {
-  font-family: "time";
-  src: url("../fontFamily/time.eot");
-  src: url("../fontFamily/time.woff") format("woff"),
-    url("../fontFamily/time.ttf") format("truetype"),
-    url("../fontFamily/time.svg") format("svg");
-}
-
-
-/* 页头标题 */
-@font-face {
-  font-family: "stitle";
-  src: url("../fontFamily/stitle.eot");
-  src: url("../fontFamily/stitle.woff") format("woff"),
-    url("../fontFamily/stitle.ttf") format("truetype"),
-    url("../fontFamily/stitle.svg") format("svg");
-}
-
-/*  大屏页左上角数字 */
-@font-face {
-  font-family: "Medium";
-  src: url("../fontFamily/Medium.eot");
-  src: url("../fontFamily/Medium.woff") format("woff"),
-    url("../fontFamily/Medium.ttf") format("truetype"),
-    url("../fontFamily/Medium.svg") format("svg");
-}
-
-/*  大屏页面其他数字 */
-@font-face {
-  font-family: "Strong";
-  src: url("../fontFamily/Strong.eot");
-  src: url("../fontFamily/Strong.woff") format("woff"),
-    url("../fontFamily/Strong.ttf") format("truetype"),
-    url("../fontFamily/Strong.svg") format("svg");
-}
 
 /* 电动汽车充电桩一体化平台 */
 @font-face {
@@ -1952,4 +1900,9 @@ div.yeallowAlert {
 .login .iconmima {
   font-size: 20px;
   color: #1ce7e2;
+}
+
+.mainContent{
+  height: 100vh;
+  background: #333;
 }
