@@ -10,20 +10,20 @@ class Login extends Component {
         };
     }
     dologin = ()=>{
-        this.props.history.push('/')
+        this.props.history.push('/main')
     }
     render() {
         return (
             <>
-                <div class="login">
-                    <div class="proTitle">
+                <div className="login">
+                    <div className="proTitle">
                         <img src={this.state.titleName} alt="" />
                     </div>
-                    <div class="lCon">
-                        <div class="cdcd">
+                    <div className="lCon">
+                        <div className="cdcd">
                             <img src={this.state.pic} alt="" />
                         </div>
-                        <div class="logmsg">
+                        <div className="logmsg">
                             <Form width="100px" label-position="top">
                                 <Input className='el-input__inner'/>
                                 <Input.Password className='el-input__inner' />

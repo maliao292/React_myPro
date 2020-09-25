@@ -13,6 +13,10 @@
 ## 安装 antd
 ### npm i antd --save
 
+## 配置绝对路径
+1. npm run ejecj
+2. config => webpack.config.js => resolve => alias
+   1. 'components': path.resolve(__dirname, '../src/components'),
 
 
 

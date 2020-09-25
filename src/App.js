@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
-import Login from './components/login'
-import Home from './components/home'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import routes from '@/router'
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
     }
+  }
+  routeList = () => {
+    return routes.map((route, key) => {
+      if (route.exact) {
+        return <Route key={key} exact path={route.path}
+          render={
+            props => (
+              <route.component {...props} route={route.children} />
+            )
+          }
+        />
+      }
+      else
+        return <Route key={key} path={route.path}
+          render={
+            props => (
+              <route.component {...props} route={route.children} />
+            )
+          }
+        />
+    })
   }
   render() {
     return (
       <div>
         <Router>
           <Switch>
-            <Route exact path='/' component={Home}></Route>
-            <Route path='/login' component={Login}></Route>
+            {this.routeList()}
           </Switch>
         </Router>
       </div >

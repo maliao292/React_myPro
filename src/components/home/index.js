@@ -1,17 +1,5 @@
-/*
- * @Author: mikey.zhaopeng 
- * @Date: 2020-09-22 17:29:24 
- * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2020-09-22 17:30:12
- */
-/*
- * @Author: mikey.zhaopeng 
- * @Date: 2020-09-22 17:29:23 
- * @Last Modified by:   mikey.zhaopeng 
- * @Last Modified time: 2020-09-22 17:29:23 
- */
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -28,6 +16,30 @@ class Home extends Component {
     logout = () => {
         this.props.history.push('/login')
     }
+    routeList = () => {
+        return this.props.route.map((route, key) => {
+            if (route.exact) {
+                return <Route key={key} exact path={route.path}
+                    render={
+                        props => (
+                            <route.component {...props} route={route.children} />
+                        )
+                    }
+                />
+            }
+            else
+                return <Route key={key} path={route.path}
+                    render={
+                        props => (
+                            <route.component {...props} route={route.children} />
+                        )
+                    }
+                />
+        })
+    }
+    componentWillMount() {
+        console.log(this.props.match.url)
+    }
     render() {
         return (
             <div className='homeContainer'>
@@ -36,10 +48,10 @@ class Home extends Component {
                         <div className="homeProName">电动汽车充电桩一体化平台</div>
                         <ul>
                             <li>
-                                <Link to='/map'><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></Link>
+                                <Link to='/map/'><div><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></div></Link>
                             </li>
                             <li>
-                                <Link to='/map'><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></Link>
+                                <Link to='/operation'><div><span className="icon iconfont iconyh_yygl1"></span><span>运营管理</span><i></i></div></Link>
                             </li>
                         </ul>
                         <div className="userMsg">
@@ -48,7 +60,11 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className='mainContent'></div>
+                    <div className='mainContent'>
+                        <Switch>
+                            {this.routeList()}
+                        </Switch>
+                    </div>
                 </div >
             </div >
         );
