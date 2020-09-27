@@ -14,7 +14,7 @@ class Home extends Component {
         };
     }
     logout = () => {
-        this.props.history.push('/login')
+        this.props.history.push('/')
     }
     routeList = () => {
         return this.props.route.map((route, key) => {
@@ -37,9 +37,6 @@ class Home extends Component {
                 />
         })
     }
-    componentWillMount() {
-        console.log(this.props.match.url)
-    }
     render() {
         return (
             <div className='homeContainer'>
@@ -48,10 +45,10 @@ class Home extends Component {
                         <div className="homeProName">电动汽车充电桩一体化平台</div>
                         <ul>
                             <li>
-                                <Link to='/map/'><div><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></div></Link>
+                                <Link to='/main/'><div><span className="icon iconfont iconyh_zhgl-01"></span><span>综合管理</span><i></i></div></Link>
                             </li>
                             <li>
-                                <Link to='/operation'><div><span className="icon iconfont iconyh_yygl1"></span><span>运营管理</span><i></i></div></Link>
+                                <Link to='/main/operation'><div><span className="icon iconfont iconyh_yygl1"></span><span>运营管理</span><i></i></div></Link>
                             </li>
                         </ul>
                         <div className="userMsg">

@@ -10,10 +10,11 @@ let routes = [{
     path: '/main',
     component: Main,
     children: [{
-        path: '/map',
+        path: '/main/',
+        exact: true,
         component: Map
     }, {
-        path: '/operation',
+        path: '/main/operation',
         component: Operation
     },]
 }]

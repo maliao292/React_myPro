@@ -19,6 +19,12 @@
    1. 'components': path.resolve(__dirname, '../src/components'),
 
 
+# redux 
+## 1级集成
+   1. npm i redux --save
+   2. 
+
+
 
 
 
