@@ -1,7 +1,7 @@
 import axios from 'axios';
 // 增加默认的请求的 url;
 axios.defaults.timeout = 150000;
-axios.defaults.baseURL = '/yhapi';
+axios.defaults.baseURL = '/reactYh/yhapi';
 axios.defaults.withCredentials = true // 允许携带cookie
 
 // http请求拦截器

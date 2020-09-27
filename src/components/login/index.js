@@ -15,7 +15,10 @@ class Login extends Component {
         console.log(store.getState())
     }
     dologin = ()=>{
-        store.dispatch(setLoginMsgAction())
+       // store.dispatch(setLoginMsgAction(this.state.username,this.state.password))
+        store.dispatch({
+            type:'LOGIN'
+        })
         this.props.history.push('/main')
     }
     render() {
