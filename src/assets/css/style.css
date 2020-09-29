@@ -818,3 +818,10 @@ body .menuList.active {
   height: 60px;
   background-size: 20px 40px;
 }
+.userMsg{
+  display: flex;
+  justify-content: space-between;
+}
+.container{
+  padding: 20px;
+}

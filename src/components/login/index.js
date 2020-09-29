@@ -12,13 +12,13 @@ class Login extends Component {
             pic: require('../../assets/images/cdbg.png'),
             factory: require('../../assets/img/type.png'),
         };
-        console.log(store.getState())
+        store.subscribe(this.login)
     }
     dologin = ()=>{
-       // store.dispatch(setLoginMsgAction(this.state.username,this.state.password))
-        store.dispatch({
-            type:'LOGIN'
-        })
+       store.dispatch(setLoginMsgAction(this.state.username,this.state.password))
+    }
+    login = ()=>{
+        localStorage.getItem('yhReact')
         this.props.history.push('/main')
     }
     render() {

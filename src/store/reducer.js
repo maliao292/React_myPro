@@ -7,9 +7,9 @@ export default (state = defaultState, action) => {
     let newState = JSON.parse(JSON.stringify(state))
     switch (action.type) {
         case logIn:
-            newState.token = action.token
+            newState.token = action.value
             newState.isLoginSuccess = true
-            sessionStorage.setItem('yhReact', action.token)
+            localStorage.setItem('yhReact', action.value)
             return newState
         default: 
             return state

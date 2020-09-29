@@ -37,6 +37,9 @@ class Home extends Component {
                 />
         })
     }
+    toSetting = ()=>{
+        this.props.history.push('/main/setting')
+    }
     render() {
         return (
             <div className='homeContainer'>
@@ -54,6 +57,9 @@ class Home extends Component {
                         <div className="userMsg">
                             <div>
                                 <img src={this.state.logout} onClick={this.logout} alt="" />
+                            </div>
+                            <div>
+                                <img className="_c" src={this.state.setting} alt="" onClick={this.toSetting} />
                             </div>
                         </div>
                     </div>
