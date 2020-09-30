@@ -29,7 +29,8 @@
    5. import { Provider } from 'react-redux' 把 store 数据 注入 根组件
       1. <Provider store={store}>
    6. import { connect } from 'react-redux'
-      1. 
+   7. npm i redux-immutable --save 使用 getIn
+      1. import { combineReducers } from 'redux-immutable'
 
 
 

@@ -113,8 +113,7 @@ class index extends Component {
 const mapStateToProps = state => {
     console.log(state.settingReducer.get('roleListArr'))
     return {
-        // list:state.getIn(['settingReducer','roleListArr'])
-        list:state.settingReducer.get('roleListArr')
+        list:state.getIn(['settingReducer','roleListArr'])
     }
 }
 const mapDispathToProps = dispatch => {
