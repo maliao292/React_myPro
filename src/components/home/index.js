@@ -22,7 +22,7 @@ class Home extends Component {
                 return <Route key={key} exact path={route.path}
                     render={
                         props => (
-                            <route.component {...props} route={route.children} />
+                            <route.component {...props} routes={route.children} />
                         )
                     }
                 />
@@ -31,7 +31,7 @@ class Home extends Component {
                 return <Route key={key} path={route.path}
                     render={
                         props => (
-                            <route.component {...props} route={route.children} />
+                            <route.component {...props} routes={route.children} />
                         )
                     }
                 />

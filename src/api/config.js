@@ -6,8 +6,8 @@ axios.defaults.withCredentials = true // 允许携带cookie
 
 // http请求拦截器
 axios.interceptors.request.use(config => {
-  if (!!localStorage.getItem('yhIdentity')) {
-    config.headers.token = localStorage.getItem('yhIdentity');
+  if (!!localStorage.getItem('yhReact')) {
+    config.headers.token = localStorage.getItem('yhReact');
 
   }
   return config
@@ -24,8 +24,8 @@ axios.interceptors.response.use(data => {// 响应成功关闭loading
   return data.data
 }, err => {
   if (err.response.status === 401) {
-    window.location.href = '/login'
-    localStorage.removeItem('yhIdentity')
+    window.location.href = '/'
+    localStorage.removeItem('yhReact')
     localStorage.removeItem('yhUserName')
   }
   return 'err'

@@ -1,49 +1,63 @@
 import React, { Component } from 'react';
-import { Row, Col, Input, Select, Button, Table, Tag, Space } from 'antd';
-const { Option } = Select;
+import { Switch, Route, Link } from 'react-router-dom'
+
 class index extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            columns: [
-                {
-                    title: 'Name',
-                    dataIndex: 'name',
-                    key: 'name',
-                    render: text => <a>{text}</a>,
-                },
-                {
-                    title: 'Age',
-                    dataIndex: 'age',
-                    key: 'age',
-                }
-            ]
+
         };
+    }
+    routeList = () => {
+        return this.props.routes.map((route, key) => {
+            if (route.exact) {
+                return <Route key={key} exact path={route.path}
+                    render={
+                        props => (
+                            <route.component {...props} route={route.children} />
+                        )
+                    }
+                />
+            }
+            else
+                return <Route key={key} path={route.path}
+                    render={
+                        props => (
+                            <route.component {...props} route={route.children} />
+                        )
+                    }
+                />
+        })
     }
     render() {
 
         return (
-            <div className='container'>
-                <div className='formSearch'>
-                    <Row gutter={16}>
-                        <Col className="gutter-row" span={2}>
-                            <Input placeholder="Basic usage" />
-                        </Col>
-                        <Col className="gutter-row" span={2}>
-                            <Select defaultValue="lucy" style={{ width: '100%' }} >
-                                <Option value="jack">Jack</Option>
-                            </Select>
-                        </Col>
+            <>
+                <div className='modelPage'>
+                    <div className="routerCon">
+                        <ul>
+                            <li>
+                                <div>
+                                    <Link to='/main/setting/'><i className="icon iconfont iconuser-fill"></i><p>用户管理</p></Link>
+                                </div>
 
-                        <Col className="gutter-row" span={6}>
-                            <Button type="primary" size='middle'>Default</Button>
-                        </Col>
-                    </Row>
-                </div>
-                <div className='tableShow'>
+                            </li>
+                            <li>
+                                <div>
+                                    <Link to='/main/setting/User'><i className="icon iconfont iconuser-group-fill"></i><p>角色管理</p></Link>
+                                </div>
+                            </li>
 
+                        </ul>
+                    </div >
+
+                </div >
+                <div className="container" style={{ width: '95%' }}>
+                    <Switch>
+                        {this.routeList()}
+                    </Switch>
                 </div>
-            </div>
+            </>
         );
     }
 }

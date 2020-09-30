@@ -1,18 +1,6 @@
-import { logIn } from './actionType'
-const defaultState = {
-    token: '',
-    isLoginSuccess:false
-}
-export default (state = defaultState, action) => {
-    let newState = JSON.parse(JSON.stringify(state))
-    switch (action.type) {
-        case logIn:
-            newState.token = action.value
-            newState.isLoginSuccess = true
-            localStorage.setItem('yhReact', action.value)
-            return newState
-        default: 
-            return state
-    }
-
-}
+import { combineReducers } from 'redux'
+import { reducer as loginReducer } from '@/components/Login/store'
+import { reducer as settingReducer } from '@/components/Home/Setting/store'
+export default combineReducers({
+    loginReducer,settingReducer
+})

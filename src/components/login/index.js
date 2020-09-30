@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Input, Button } from 'antd';
 import store from '@/store'
-import {setLoginMsgAction} from '@/store/createAction';
+import {setLoginMsgAction} from './store/createAction';
 class Login extends Component {
     constructor(props) {
         super(props);

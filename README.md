@@ -22,7 +22,14 @@
 # redux 
 ## 1级集成
    1. npm i redux --save
-   2. 
+   2. npm i react-thunk --save 可以使用 异步 action
+   3. npm i immutable --save  改变reducer 数据类型  防止修改 state
+      1. merge修改多个值
+   4. redux-immutable from redux 管理 多个store
+   5. import { Provider } from 'react-redux' 把 store 数据 注入 根组件
+      1. <Provider store={store}>
+   6. import { connect } from 'react-redux'
+      1. 
 
 
 
