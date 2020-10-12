@@ -10,6 +10,7 @@ class index extends Component {
 
         };
         this.props.getList()
+        console.log(this.props.list)
     }
     render() {
         const columns = [
@@ -33,21 +34,21 @@ class index extends Component {
                 title: 'Tags',
                 key: 'tags',
                 dataIndex: 'tags',
-                render: tags => (
-                    <>
-                        {tags.map(tag => {
-                            let color = tag.length > 5 ? 'geekblue' : 'green';
-                            if (tag === 'loser') {
-                                color = 'volcano';
-                            }
-                            return (
-                                <Tag color={color} key={tag}>
-                                    {tag.toUpperCase()}
-                                </Tag>
-                            );
-                        })}
-                    </>
-                ),
+                // render: tags => (
+                //     <>
+                //         {tags.map(tag => {
+                //             let color = tag.length > 5 ? 'geekblue' : 'green';
+                //             if (tag === 'loser') {
+                //                 color = 'volcano';
+                //             }
+                //             return (
+                //                 <Tag color={color} key={tag}>
+                //                     {tag.toUpperCase()}
+                //                 </Tag>
+                //             );
+                //         })}
+                //     </>
+                // ),
             },
             {
                 title: 'Action',
@@ -104,14 +105,13 @@ class index extends Component {
                     </Row>
                 </div>
                 <div className='tableShow'>
-                    <Table className='yhTable' columns={columns} dataSource={data} />
+                    <Table className='yhTable' columns={columns} dataSource={this.props.list.records} />
                 </div>
             </div>
         );
     }
 }
 const mapStateToProps = state => {
-    console.log(state.settingReducer.get('roleListArr'))
     return {
         list:state.getIn(['settingReducer','roleListArr'])
     }

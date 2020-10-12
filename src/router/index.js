@@ -24,9 +24,9 @@ let routes = [{
         component: Setting,
         children: [{
             path: '/main/setting/',
-             exact: true,
+            exact: true,
             component: Role,
-        },{
+        }, {
             path: '/main/setting/user',
             component: User,
         }]

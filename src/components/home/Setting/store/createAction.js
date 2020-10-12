@@ -9,13 +9,9 @@ export const getList = value => ({
 
 export const setLoginMsgAction = (formdata) => dispatch => {
     list(formdata).then((res) => {
-        res.code === 200 ? message.success(res.msg) : message.error(res.msg);
         if (res.code === 200) {
-        console.log(res.data)
-
             dispatch(getList(res.data))
         }
-
     })
 }
 

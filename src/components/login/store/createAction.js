@@ -9,10 +9,9 @@ export const loginAction = value => ({
 
 export const setLoginMsgAction = (username, password) => dispatch => {
     loginapi({ username, password }).then((res) => {
-        console.log(res)
         let token = res.headers.authorization
         res = res.data
-        res.code === 200 ? message.success(res.msg) : message.error(res.msg);
+        // res.code === 200 ? message.success(res.msg) : message.error(res.msg);
         if (res.code === 200) {
             dispatch(loginAction(token))
         }

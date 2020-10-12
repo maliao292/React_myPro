@@ -38,7 +38,7 @@ class Home extends Component {
         })
     }
     toSetting = ()=>{
-        this.props.history.push('/main/setting')
+        this.props.history.push('/main/setting/user')
     }
     render() {
         return (
